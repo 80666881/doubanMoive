@@ -115,7 +115,6 @@ var top250 = {
             },
             dataType: 'jsonp' //不支持CORS跨域，设置为jsonp可以直接使用
         }).done(function (ret) {
-            console.log(ret);
             _this.index += 20;
             if (_this.index >= ret.total - 200) {
                 _this.end = true;
@@ -170,7 +169,6 @@ var top250 = {
             type: 'GET',
             dataType: 'jsonp' //不支持CORS跨域，设置为jsonp可以直接使用
         }).done(function (ret) {
-            console.log(ret);
             common.render(ret, (0, _jquery2.default)('.northUS'));
             (0, _jquery2.default)('.northUS-ct .end').show();
         }).fail(function (err) {
